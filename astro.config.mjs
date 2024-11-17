@@ -7,6 +7,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Thoth Tech",
+      site: 'https://omckeon.github.io/',
       favicon: "/favicon.svg",
       plugins: [
         starlightLinksValidator({
