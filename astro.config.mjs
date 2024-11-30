@@ -9,11 +9,11 @@ export default defineConfig({
     starlight({
       title: "Thoth Tech",
       favicon: "/favicon.svg",
-      // plugins: [
-      //   starlightLinksValidator({
-      //     errorOnRelativeLinks: true,
-      //   }),
-      // ],
+      plugins: [
+        starlightLinksValidator({
+          errorOnRelativeLinks: true,
+        }),
+      ],
       customCss: ["./src/styles/custom.css"],
       social: {
         github: "https://github.com/thoth-tech",
