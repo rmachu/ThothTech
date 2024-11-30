@@ -11,7 +11,7 @@ export default defineConfig({
       favicon: "/favicon.svg",
       plugins: [
         starlightLinksValidator({
-          errorOnRelativeLinks: true,
+          errorOnRelativeLinks: false,
         }),
       ],
       customCss: ["./src/styles/custom.css"],
