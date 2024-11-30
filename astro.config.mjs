@@ -31,13 +31,16 @@ export default defineConfig({
           label: "Resources",
           collapsed: false,
           items: [
+            { label: "Recources", link: "/resources"},
             {
               label: "Introduction",
-              link: "./src/content/docs/Resources/introduction"
+              collapsed: true,
+              autogenerate: { directory: "Resources/introduction"}
             },
             {
               label: "Thoth Tech Technology Stack",
-              link: "/Resources/thoth-tech-technology-stack"
+              collapsed: true,
+              autogenerate: { directory: "/Resources/thoth-tech-technology-stack"}
             },
             {
               label: "Remote Working Guide",
