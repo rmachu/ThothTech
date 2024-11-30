@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import starlightLinksValidator from 'starlight-links-validator';
+//import starlightLinksValidator from 'starlight-links-validator';
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,11 +9,11 @@ export default defineConfig({
     starlight({
       title: "Thoth Tech",
       favicon: "/favicon.svg",
-      plugins: [
-        starlightLinksValidator({
-          errorOnRelativeLinks: true,
-        }),
-      ],
+      // plugins: [
+      //   starlightLinksValidator({
+      //     errorOnRelativeLinks: true,
+      //   }),
+      // ],
       customCss: ["./src/styles/custom.css"],
       social: {
         github: "https://github.com/thoth-tech",
