@@ -4,7 +4,7 @@ import starlightLinksValidator from 'starlight-links-validator';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://rmachu.github.io/ThothTech-Documentation-Website/',
+  site: 'https://rmachu.github.io',
   integrations: [
     starlight({
       title: "Thoth Tech",
@@ -34,17 +34,15 @@ export default defineConfig({
             { label: "Recources", link: "/resources"},
             {
               label: "Introduction",
-              collapsed: true,
-              autogenerate: { directory: "Resources/introduction"}
+              link: "/resources/introduction/"
             },
             {
               label: "Thoth Tech Technology Stack",
-              collapsed: true,
-              autogenerate: { directory: "/Resources/thoth-tech-technology-stack"}
+              link: "/resources/thoth-tech-technology-stack"
             },
             {
               label: "Remote Working Guide",
-              link: "/Resources/remote-working-guide"
+              link: "/resources/remote-working-guide"
             },
             {
               label: "Onboarding Hub",
@@ -95,7 +93,7 @@ export default defineConfig({
           items: [
             {
               label: "Feedback Form",
-              link: "/feedback/feedback-form.md"
+              link: "/feedback/feedback-form"
             }
           ],
         },
