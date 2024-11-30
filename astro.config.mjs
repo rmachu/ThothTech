@@ -4,10 +4,10 @@ import starlightLinksValidator from 'starlight-links-validator';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://rmachu.github.io',
   integrations: [
     starlight({
       title: "Thoth Tech",
-      site: 'https://rmachu.github.io',
       favicon: "/favicon.svg",
       plugins: [
         starlightLinksValidator({
