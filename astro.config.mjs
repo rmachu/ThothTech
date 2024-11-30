@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Thoth Tech",
-      favicon: "/favicon.svg",
+      favicon: "./favicon.svg",
       plugins: [
         starlightLinksValidator({
           errorOnRelativeLinks: false,
@@ -33,15 +33,15 @@ export default defineConfig({
           items: [
             {
               label: "Introduction",
-              link: "/resources/introduction"
+              link: "./resources/introduction"
             },
             {
               label: "Thoth Tech Technology Stack",
-              link: "/resources/thoth-tech-technology-stack"
+              link: "./resources/thoth-tech-technology-stack"
             },
             {
               label: "Remote Working Guide",
-              link: "/resources/remote-working-guide"
+              link: "./resources/remote-working-guide"
             },
             {
               label: "Onboarding Hub",
@@ -55,7 +55,7 @@ export default defineConfig({
             },
             {
               label: "Frequently Asked Questions (FAQ)",
-              link: "/resources/faq"
+              link: "./resources/faq"
             },
           ],
         },
@@ -63,7 +63,7 @@ export default defineConfig({
           label: "Products",
           collapsed: false,
           items: [
-            { label: "Products", link: "/products" },
+            { label: "Products", link: "./products" },
             {
               label: "SplashKit",
               collapsed: true,
@@ -92,7 +92,7 @@ export default defineConfig({
           items: [
             {
               label: "Feedback Form",
-              link: "/feedback/feedback-form"
+              link: "./feedback/feedback-form"
             }
           ],
         },
