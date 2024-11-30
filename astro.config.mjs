@@ -33,7 +33,7 @@ export default defineConfig({
           items: [
             {
               label: "Introduction",
-              link: "/src/Resources/introduction"
+              link: "/src/content/docs/Resources/introduction"
             },
             {
               label: "Thoth Tech Technology Stack",
