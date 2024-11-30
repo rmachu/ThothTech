@@ -14,9 +14,9 @@
     "lint": "npm run format:check && npm run prose:check"
   },
   "dependencies": {
-    "@astrojs/netlify": "^3.0.0",
-    "@astrojs/starlight": "^0.28.2",
-    "astro": "^4.13.3",
+    "@astrojs/netlify": "^5.5.4",
+    "@astrojs/starlight": "^0.29.2",
+    "astro": "^4.16.16",
     "sharp": "^0.32.3",
     "starlight": "^0.3.9",
     "starlight-blog": "^0.4.0",

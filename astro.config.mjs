@@ -7,7 +7,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Thoth Tech",
-      site: 'https://rmachu.github.io/',
+      site: 'https://rmachu.github.io',
       favicon: "/favicon.svg",
       plugins: [
         starlightLinksValidator({
