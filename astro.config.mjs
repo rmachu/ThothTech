@@ -33,15 +33,15 @@ export default defineConfig({
           items: [
             {
               label: "Introduction",
-              link: "/src/resources/introduction"
+              link: "/src/Resources/introduction"
             },
             {
               label: "Thoth Tech Technology Stack",
-              link: "/src/resources/thoth-tech-technology-stack"
+              link: "/Resources/thoth-tech-technology-stack"
             },
             {
               label: "Remote Working Guide",
-              link: "/resources/remote-working-guide"
+              link: "/Resources/remote-working-guide"
             },
             {
               label: "Onboarding Hub",
