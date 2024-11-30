@@ -37,7 +37,7 @@ export default defineConfig({
             },
             {
               label: "Thoth Tech Technology Stack",
-              link: "/resources/thoth-tech-technology-stack"
+              link: "/src/resources/thoth-tech-technology-stack"
             },
             {
               label: "Remote Working Guide",
