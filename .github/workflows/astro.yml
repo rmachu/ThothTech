@@ -76,6 +76,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ env.BUILD_PATH }}/dist
+      - name: Set PR Preview Environment Variable
+        run: echo "PR_PREVIEW=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+
 
   deploy:
     environment:
