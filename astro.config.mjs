@@ -6,7 +6,7 @@ import starlight from "@astrojs/starlight";
 export default defineConfig({
   base: process.env.PR_PREVIEW
   ? `/pr-preview/${process.env.PR_PREVIEW}/` // Use this path for PR previews
-  : "/",
+  : "/ThothTech-Documentation-Website/",
   site: 'https://rmachu.github.io',
   integrations: [
     starlight({
