@@ -16,7 +16,7 @@ export default defineConfig({
       // ],
       customCss: ["./src/styles/custom.css"],
       social: {
-        github: "https://github.com/thoth-tech",
+        github: "https://github.com/ThothTech",
       },
       logo: {
         src: "./public/favicon.svg",
