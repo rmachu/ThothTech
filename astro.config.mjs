@@ -37,7 +37,7 @@ export default defineConfig({
             { label: "Recources", link: "/resources"},
             {
               label: "Introduction",
-              link: "/resources/introduction/"
+              link: "pr-preview/pr-1/resources/introduction/"
             },
             {
               label: "Thoth Tech Technology Stack",
