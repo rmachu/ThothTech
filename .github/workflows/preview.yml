@@ -54,6 +54,7 @@ jobs:
 
       # Install dependencies and build your site
       - name: Install dependencies and build
+        if: github.event.action != 'closed'
         run: |
           npm install
           npm run build
