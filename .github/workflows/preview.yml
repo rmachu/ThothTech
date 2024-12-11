@@ -65,7 +65,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist # Replace with your build output directory
-          publish_branch: pr-previews/pr-${{ github.event.pull_request.number }}
+          publish_branch: gh-pages
+          destination_dir: pr-${{ github.event.pull_request.number }}
 
       # Comment on the PR with the preview link
       - name: Post PR comment

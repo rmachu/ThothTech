@@ -4,13 +4,9 @@ import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
-  // base: process.env.PR_PREVIEW
-  // ? `/pr-preview/${process.env.PR_PREVIEW}/` // Use this path for PR previews
-  // : "/ThothTech/",
-  site: 'https://rmachu.github.io',
+  site: 'https://rmachu.github.io/',
   integrations: [
     starlight({
-      base: "/rmachu.github.io/pr-2/",
       title: "Thoth Tech Website",
       favicon: "/favicon.svg",
       // plugins: [
