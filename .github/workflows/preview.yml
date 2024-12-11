@@ -1,30 +1,73 @@
-# .github/workflows/preview.yml
-name: Deploy PR previews
+# # .github/workflows/preview.yml
+# name: Deploy PR previews
+
+# on:
+#   pull_request:
+#     types:
+#       - opened
+#       - reopened
+#       - synchronize
+#       - closed
+
+# concurrency: preview-${{ github.ref }}
+
+# jobs:
+#   deploy-preview:
+#     runs-on: ubuntu-20.04
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
+
+#       - name: Install and Build
+#         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
+#         run: |
+#           npm install
+#           npm run build
+
+#       - name: Deploy preview
+#         uses: rossjrw/pr-preview-action@v1
+#         with:
+#           source-dir: ./dist/
+
+
+name: Pull Request Preview
 
 on:
   pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - closed
-
-concurrency: preview-${{ github.ref }}
+    branches:
+      - main
 
 jobs:
-  deploy-preview:
-    runs-on: ubuntu-20.04
+  deploy:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      # Checkout the PR branch
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install and Build
-        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
+      # Set up Node.js (if you're using a static site generator)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # Install dependencies and build your site
+      - name: Install dependencies and build
         run: |
           npm install
           npm run build
 
+      # Deploy the built site to a preview branch
       - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          source-dir: ./dist/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # Replace with your build output directory
+          publish_branch: pr-previews/pr-${{ github.event.pull_request.number }}
+
+      # Comment on the PR with the preview link
+      - name: Post PR comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: "Preview your changes here: https://<your-username>.github.io/<repo-name>/pr-${{ github.event.pull_request.number }}/"
