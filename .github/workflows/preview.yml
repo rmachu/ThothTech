@@ -71,4 +71,4 @@ jobs:
       - name: Post PR comment
         uses: marocchino/sticky-pull-request-comment@v2
         with:
-          message: "Preview your changes here: https://<your-username>.github.io/<repo-name>/pr-${{ github.event.pull_request.number }}/"
+          message: "Preview your changes here: https://rmachu.github.io/rmachu.github.io/pr-${{ github.event.pull_request.number }}/"
