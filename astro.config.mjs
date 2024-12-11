@@ -4,13 +4,13 @@ import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
-  base: process.env.PR_PREVIEW
-  ? `/pr-preview/${process.env.PR_PREVIEW}/` // Use this path for PR previews
-  : "/ThothTech/",
+  // base: process.env.PR_PREVIEW
+  // ? `/pr-preview/${process.env.PR_PREVIEW}/` // Use this path for PR previews
+  // : "/ThothTech/",
   site: 'https://rmachu.github.io',
   integrations: [
     starlight({
-      title: "Thoth Tech Website 2",
+      title: "Thoth Tech Website",
       favicon: "/favicon.svg",
       // plugins: [
       //   starlightLinksValidator({
@@ -37,7 +37,7 @@ export default defineConfig({
             { label: "Recources", link: "/resources"},
             {
               label: "Introduction",
-              link: "pr-preview/pr-1/resources/introduction/"
+              link: "/resources/introduction/"
             },
             {
               label: "Thoth Tech Technology Stack",
